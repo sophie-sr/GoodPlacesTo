@@ -1,13 +1,82 @@
-<h1>Login</h1>
-<form action = '/login' method = POST>
-    <div>
-        <label for = 'email'>Email</label>
-        <input type="email" id="email" name ="email" required>
-    </div>
-    <div>
-        <label for = 'password'>Password</label>
-        <input type="password" id="password" name ="password" required>
-    </div>
-    <button type="submit">Login</button>
-</form>
-<a href = '/register'>Register</a>
+<html>
+    <head>
+        <title>login</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <style>
+            body {
+                display: flex;
+                background-color: #909090;
+                justify-content: center;
+            }
+
+            .login {
+                max-height: 300px;
+                box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5); 
+                background-color: white;
+                /* border: black 1px solid; */
+                padding: 20px;
+                margin-top : 10%;
+                padding-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+
+            .inputs {
+                font-size: 13px;
+                display: flex;
+                flex-flow: column nowrap;
+                margin: 2px 0px 3px 0px;
+            }
+
+            /* label {
+                font-size: 10px;
+            } */
+
+            .btn {
+                background-color:black;
+                color: white;
+                width: 250px;
+                height: 30px;
+                transition: background-color 0.35s, color 0.35s;
+            }
+
+            .btn:hover {
+                background-color: white;
+                color: black;
+            }
+
+            input {
+                font-size: 11px;
+                height: 20px;
+            }
+
+            #password {
+                margin-bottom: 7px;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div class="login">
+            <h1>Good Places To...</h1>
+            <p>Sign in with your email and password</p>
+            <form action = '/login' method = POST>
+                <div class="inputs">
+                    <label for = 'email'>Email</label>
+                    <input type="email" id="email" name ="email" placeholder="name@host.com" required>
+                </div>
+                <div class="inputs" id = password>
+                    <label for = 'password'>Password</label>
+                    <input type="password" id="password" name ="password" placeholder="password" required>
+                </div>
+                <!-- <br> -->
+                <button class="btn" type="submit">Login</button>
+            </form>
+            <p>Need an account? <a href = '/register'>Sign Up</a></p>
+        </div>
+    </body>
+    
+</html>
+
