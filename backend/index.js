@@ -4,17 +4,18 @@ import flash from 'express-flash'
 import session from 'express-session'
 import methodOverride from 'method-override'
 import dotenv from 'dotenv'
+import passport from 'passport'
 
 const app = express()
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 app.use(flash())
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false
-}))
+// app.use(session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: false
+// }))
 
 app.get('/', checkAuthenticated, (req, res) => {
     res.render('index.ejs', { name: req.user.name })
@@ -69,4 +70,6 @@ function checkNotAuthenticated (req,res,next) {
     next()
 }
 
-app.listen(3000)
+app.listen(3000, () => {
+    console.log(`Server is running on http://localhost:3000`);
+  });
