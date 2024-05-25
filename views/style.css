@@ -1,56 +1,4 @@
-<head>
-    <title>GoodPlacesTo...</title>
-    <!-- <link href="style.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-</head>
-<body>
-    <!-- <ul>
-        <li><a href="home.html"><i class="fas fa-home"></i></a></li>
-        <li style="float:right">
-            <div class="dropdown">
-                <button class="dropbtn">Maps</button>
-                <div class="dropdown-content">
-                    <a href="home.html">Water Fountains</a>
-                    <a href="home.html">Washrooms</a>
-                    <a href="home.html">Showers</a>
-                </div>
-            </div>
-        </li>
-        <li style="float:right"><a href="home.html">Login</a></li>
-    </ul> -->
-
-    <div class="navbar">
-        <a href="/home"><i class="fas fa-home"></i></a>
-        <a href="/login" style="float:right"><form action = '/logout?_method=DELETE' method="POST">
-            <button type="submit">Log Out</button>
-        </form></a>
-        <div class="dropdown" style="float:right">
-            <button class="dropbtn">Maps <i class="fa fa-caret-down"></i></button>
-            <div class="dropdown-content">
-            <a href="/waterFountains">Water Fountains</a>
-            <a href="home.html">Washrooms</a>
-            <a href="home.html">Showers</a>
-            </div>
-        </div> 
-    </div>
-
-    <div class="content">
-        <div class="wrapper">
-            <p>Good places to... </p>
-            <div class="words">
-                <span>drink water</span>
-                <span>go to the washroom</span>
-                <span>drink water</span>
-                <span>go to the washroom</span>
-                <span>drink water</span>
-                <span>go to the washroom</span>
-            </div>
-        </div>
-    </div>
-</body>
-
-<style>
-    .right-side {
+.right-side {
     display: flex;
     padding-left: 70%;
     padding-right: 0px;
@@ -345,4 +293,3 @@ form .btn button:hover{
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
-</style>

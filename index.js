@@ -22,6 +22,8 @@ initialize (
     id => users.find(user => user.id === id)
 )
 
+app.use("/styles",express.static("/views"));
+
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 app.use(flash())
@@ -41,6 +43,14 @@ app.get('/', checkAuthenticated, (req, res) => {
 
 app.get('/login',  (req, res) => {
     res.render('login.ejs')
+});
+
+app.get('/home', (req, res) => {
+    res.render('index.ejs')
+});
+
+app.get('/waterFountains', (req, res) => {
+    res.render('waterFountains.ejs')
 });
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
@@ -75,6 +85,18 @@ app.delete('/logout', (req, res, next) => {
         res.redirect('/login');
     });
 });
+
+app.post('/waterFountains', (req, res, next) => {
+    console.log("1");
+    const request = req.body;
+    console.log("2");
+    let sushi = request.rate1;
+
+    console.log(request); //returns 'on'
+
+    res.redirect('/waterFountains');
+
+})
 
 function checkAuthenticated (req,res,next) {
     if (req.isAuthenticated()) {
