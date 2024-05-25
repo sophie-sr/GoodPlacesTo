@@ -69,10 +69,12 @@ app.post('/register', checkNotAuthenticated, async(req, res) => {
 })
 
 
-app.delete('/logout', (req,res) => {
-    req.logOut()
-    res.redirect('/login')
-})
+app.delete('/logout', (req, res, next) => {
+    req.logout((err) => {
+        if (err) { return next(err); }
+        res.redirect('/login');
+    });
+});
 
 function checkAuthenticated (req,res,next) {
     if (req.isAuthenticated()) {
@@ -83,7 +85,7 @@ function checkAuthenticated (req,res,next) {
 
 function checkNotAuthenticated (req,res,next) {
     if (req.isAuthenticated()) {
-        return res.redirect('/login')
+        return res.redirect('/')
     }
     next()
 }
