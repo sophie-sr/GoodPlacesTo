@@ -1,3 +1,17 @@
-.btn {
-    
+.navigation {
+    border: gray 2px solid;
+    display: flex;
+    height: 30px;
+    padding: 20px;
+    /* background-color: black; */
+}
+
+.right-side {
+    display: flex;
+    padding-left: 70%;
+    padding-right: 0px;
+}
+
+select {
+    width: 60px;
 }
