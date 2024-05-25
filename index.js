@@ -5,6 +5,8 @@ import session from 'express-session'
 import methodOverride from 'method-override'
 import dotenv from 'dotenv'
 import passport from 'passport'
+import userConfig from './user-config.js'
+
 
 if (process.env.NODE_ENV !== 'production'){
     dotenv.config({ path: '.env' });
