@@ -49,3 +49,8 @@ app.post('/register', checkNotAuthenticated, async(res,req) => {
     }
 })
 
+
+app.delete('/logout', (req,res) => {
+    req.logOut()
+    res.redirect('/login')
+})
