@@ -10,6 +10,7 @@
     background-color: white;
     color: black;
     height: 7%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.035);
 }
 
 .navbar a {
@@ -114,7 +115,7 @@ body{
 .words{
     overflow: hidden;
 }
-span{
+.words span{
     display: block;
     height: 100%;
     padding-left: 10px;
@@ -150,29 +151,27 @@ span{
 
 #map {
     height: 93%;
-    width: 100%;
+    width: 80%;
 }
 
 .container{
   position: relative;
   width: 400px;
-  background: #111;
-  padding: 20px 30px;
-  border: 1px solid #444;
+  background: white;
+  /* padding: 30px 30px; */
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-size: 14px;
+  overflow: auto;
 }
+
 .container .post{
   display: none;
 }
-.container .text{
-  font-size: 25px;
-  color: #666;
-  font-weight: 500;
-}
+
 .container .edit{
   position: absolute;
   right: 10px;
@@ -188,45 +187,32 @@ span{
 .container .star-widget input{
   display: none;
 }
+
 .star-widget label{
   font-size: 40px;
   color: #444;
   padding: 10px;
   float: right;
-  transition: all 0.2s ease;
+  transition: 0.2s;
 }
+
 input:not(:checked) ~ label:hover,
 input:not(:checked) ~ label:hover ~ label{
   color: #fd4;
 }
+
 input:checked ~ label{
   color: #fd4;
 }
-input#rate-5:checked ~ label{
-  color: #fe7;
-  text-shadow: 0 0 20px #952;
-}
-#rate-1:checked ~ form header:before{
-  content: "I just hate it ";
-}
-#rate-2:checked ~ form header:before{
-  content: "I don't like it ";
-}
-#rate-3:checked ~ form header:before{
-  content: "It is awesome ";
-}
-#rate-4:checked ~ form header:before{
-  content: "I just like it ";
-}
-#rate-5:checked ~ form header:before{
-  content: "I just love it ";
-}
+
 .container form{
   display: none;
 }
+
 input:checked ~ form{
   display: block;
 }
+
 form header{
   width: 100%;
   font-size: 25px;
@@ -236,43 +222,74 @@ form header{
   text-align: center;
   transition: all 0.2s ease;
 }
+
 form .textarea{
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
+    height: 100px;
+    width: 100%;
+    overflow: auto;
 }
+
 form .textarea textarea{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  color: #eee;
-  border: 1px solid #333;
-  background: #222;
-  padding: 10px;
-  font-size: 17px;
-  resize: none;
+    height: 80%;
+    width: 100%;
+    outline: none;
+    color: black;
+    border: 1px solid #333;
+    background: white;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    border-radius: 8px;
+    margin-top: 10px;
+
+    opacity: 0.6;
+    transition: 0.3s;
 }
+
 .textarea textarea:focus{
-  border-color: #444;
+    opacity: 1;
 }
+
+.textarea textarea:hover{
+    opacity: 1;
+}
+
 form .btn{
   height: 45px;
   width: 100%;
   margin: 15px 0;
 }
+
 form .btn button{
   height: 100%;
   width: 100%;
-  border: 1px solid #444;
   outline: none;
-  background: #222;
-  color: #999;
-  font-size: 17px;
-  font-weight: 500;
-  text-transform: uppercase;
+  background: white;
+  border: none;
+  color: black;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  opacity: 0.6;
+  transition: 0.3s;
 }
+
 form .btn button:hover{
-  background: #1b1b1b;
+    opacity: 1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
