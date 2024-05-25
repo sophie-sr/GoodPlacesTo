@@ -5,7 +5,7 @@ import session from 'express-session'
 import methodOverride from 'method-override'
 import dotenv from 'dotenv'
 import passport from 'passport'
-import userConfig from './user-config.js'
+import initialize from './user-config.js'
 
 
 if (process.env.NODE_ENV !== 'production'){
@@ -14,6 +14,13 @@ if (process.env.NODE_ENV !== 'production'){
 
 const app = express()
 const users = []
+
+
+initialize (
+    passport,
+    email => users.find(user => user.email === email),
+    id => users.find(user => user.id === id)
+)
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
@@ -36,11 +43,11 @@ app.get('/login',  (req, res) => {
     res.render('login.ejs')
 });
 
-// app.post('/login', checkNotAuthenticated, users.authenticate('local', {
-//     successRedirect: '/',
-//     failureRedirect: '/login', 
-//     failureFlash: true
-// }));
+app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login', 
+    failureFlash: true
+}));
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
     res.render('register.ejs')
