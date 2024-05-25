@@ -6,26 +6,35 @@ import methodOverride from 'method-override'
 import dotenv from 'dotenv'
 import passport from 'passport'
 
+if (process.env.NODE_ENV !== 'production'){
+    dotenv.config({ path: '.env' });
+}
+
 const app = express()
+const users = []
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 app.use(flash())
-// app.use(session({
-//     secret: process.env.SESSION_SECRET,
-//     resave: false,
-//     saveUninitialized: false
-// }))
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
+
+app.use(passport. initialize())
+app.use(passport.session())
+app.use(methodOverride('_method'))
 
 app.get('/', checkAuthenticated, (req, res) => {
     res.render('index.ejs', { name: req.user.name })
 })
 
-app.get('/login', checkNotAuthenticated, (req, res) => {
+app.get('/login',  (req, res) => {
     res.render('login.ejs')
 });
 
-// app.post('/login', checkNotAuthenticated, user.authenticate('local', {
+// app.post('/login', checkNotAuthenticated, users.authenticate('local', {
 //     successRedirect: '/',
 //     failureRedirect: '/login', 
 //     failureFlash: true
@@ -35,7 +44,7 @@ app.get('/register', checkNotAuthenticated, (req, res) => {
     res.render('register.ejs')
 })
 
-app.post('/register', checkNotAuthenticated, async(res,req) => {
+app.post('/register', checkNotAuthenticated, async(req, res) => {
     try {
         const hashedPass = await bcrypt.hash(req.body.password, 10)
         users.push({
@@ -72,4 +81,4 @@ function checkNotAuthenticated (req,res,next) {
 
 app.listen(3000, () => {
     console.log(`Server is running on http://localhost:3000`);
-  });
+});
