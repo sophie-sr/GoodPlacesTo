@@ -24,11 +24,11 @@ app.get('/login', checkNotAuthenticated, (req, res) => {
     res.render('login.ejs')
 });
 
-app.post('/login', checkNotAuthenticated, user.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/login', 
-    failureFlash: true
-}));
+// app.post('/login', checkNotAuthenticated, user.authenticate('local', {
+//     successRedirect: '/',
+//     failureRedirect: '/login', 
+//     failureFlash: true
+// }));
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
     res.render('register.ejs')
@@ -62,3 +62,11 @@ function checkAuthenticated (req,res,next) {
     res.redirect('/login')
 }
 
+function checkNotAuthenticated (req,res,next) {
+    if (req.isAuthenticated()) {
+        return res.redirect('/login')
+    }
+    next()
+}
+
+app.listen(3000)
