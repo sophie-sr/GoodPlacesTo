@@ -6,6 +6,7 @@ import methodOverride from 'method-override'
 import dotenv from 'dotenv'
 import passport from 'passport'
 import initialize from './user-config.js'
+import path from 'path'
 
 
 if (process.env.NODE_ENV !== 'production'){
@@ -13,6 +14,8 @@ if (process.env.NODE_ENV !== 'production'){
 }
 
 const app = express()
+
+
 const users = []
 
 
