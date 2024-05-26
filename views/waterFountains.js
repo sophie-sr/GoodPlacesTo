@@ -1,11 +1,11 @@
-export const fountains = {
+export default fountains = {
     marker1: {
         coords: {
             lat: 48.46212825453619, 
             lng: -123.31790950732885
         },
         content: 'Visual Arts Department',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker2: {
@@ -14,7 +14,7 @@ total: 1
             lng: -123.31650695089397
         },
         content: 'Arts Place',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker3: {
@@ -23,7 +23,7 @@ total: 1
             lng: -123.31436972523507
         },
         content: 'Human&Social Development A wing',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker4: {
@@ -32,7 +32,7 @@ total: 1
             lng: -123.31497351986425
         },
         content: 'Human&Social Development B wing',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker5: {
@@ -41,7 +41,7 @@ total: 1
             lng: -123.31425168303511
         },
         content: 'MacLaurin A wing main floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker6: {
@@ -50,7 +50,7 @@ total: 1
             lng: -123.31358203991148
         },
         content: 'MacLaurin A wing outside David Lam Auditorium',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker7: {
@@ -59,7 +59,7 @@ total: 1
             lng: -123.31370669990311
         },
         content: 'MacLaurin D wing',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker8: {
@@ -68,7 +68,7 @@ total: 1
             lng: -123.31409475439476
         },
         content: 'Hickman Building',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker9: {
@@ -77,7 +77,7 @@ total: 1
             lng: -123.31319204984894
         },
         content: 'Cornett Building',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker10: {
@@ -86,7 +86,7 @@ total: 1
             lng: -123.31417037337482
         },
         content: 'David Turpin Building A wing',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker11: {
@@ -95,7 +95,7 @@ total: 1
             lng: -123.31317225806862
         },
         content: 'David Strong Building 1',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker12: {
@@ -104,7 +104,7 @@ total: 1
             lng: -123.31318496792521
         },
         content: 'David Strong Building 2',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker13: {
@@ -113,7 +113,7 @@ total: 1
             lng: -123.31318496792521
         },
         content: 'Business and Economics Building',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker14: {
@@ -122,7 +122,7 @@ total: 1
             lng: -123.31168183222047
         },
         content: 'Welcome Centre (outside of Mystic Market)',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker15: {
@@ -131,7 +131,7 @@ total: 1
             lng: -123.31374989758699
         },
         content: 'Michael Williams Administration Building',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker16: {
@@ -140,7 +140,7 @@ total: 1
             lng: -123.31248284345439
         },
         content: 'Continuing Studies',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker17: {
@@ -149,7 +149,7 @@ total: 1
             lng: -123.31085169330615
         },
         content: 'Mckinnon Gym',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker18: {
@@ -158,7 +158,7 @@ total: 1
             lng: -123.31098276786821
         },
         content: 'CARSA',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker19: {
@@ -167,7 +167,7 @@ total: 1
             lng: -123.31032298184077
         },
         content: 'Clearihue A wing',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker20: {
@@ -176,7 +176,7 @@ total: 1
             lng: -123.31090619406763
         },
         content: 'Clearihue B wing',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker21: {
@@ -185,7 +185,7 @@ total: 1
             lng: -123.31076806485602
         },
         content: 'Clearihue C wing',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker22: {
@@ -194,7 +194,7 @@ total: 1
             lng: -123.30982418190985
         },
         content: 'Clearihue D wing',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker23: {
@@ -203,7 +203,7 @@ total: 1
             lng: -123.30985486173005
         },
         content: 'Bibliocafe',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker24: {
@@ -212,7 +212,7 @@ total: 1
             lng: -123.30964659639733
         },
         content: 'McPherson Library B1',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker25: {
@@ -221,7 +221,7 @@ total: 1
             lng: -123.30940769163811
         },
         content: 'McPherson Library Main floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker26: {
@@ -230,7 +230,7 @@ total: 1
             lng: -123.3094967038214
         },
         content: 'McPherson Library 2nd floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker27: {
@@ -239,7 +239,7 @@ total: 1
             lng: -123.30955851783747
         },
         content: 'McPherson Library 3rd floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker28: {
@@ -248,7 +248,7 @@ total: 1
             lng: -123.31002783808272
         },
         content: 'Elliott',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker29: {
@@ -257,7 +257,7 @@ total: 1
             lng: -123.31019047349615
         },
         content: 'Petch Building',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker30: {
@@ -266,7 +266,7 @@ total: 1
             lng: -123.3089312107217
         },
         content: 'BWC',
-        rating: 5,
+        rating: NA,
 total: 1
     },  
     marker31: {
@@ -275,7 +275,7 @@ total: 1
             lng: -123.31167319933711
         },
         content: 'ECS Main floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker32: {
@@ -284,7 +284,7 @@ total: 1
             lng: -123.31169353600625
         },
         content: 'ECS 2nd floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },  
     marker33: {
@@ -293,7 +293,7 @@ total: 1
             lng: -123.3116299839152
         },
         content: 'ECS 3rd floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker34: {
@@ -302,7 +302,7 @@ total: 1
             lng: -123.31134018638002
         },
         content: 'ECS 4th floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker35: {
@@ -311,7 +311,7 @@ total: 1
             lng:  -123.31155626348958
         },
         content: 'ECS 5th floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker36: {
@@ -320,7 +320,7 @@ total: 1
             lng: -123.31135289679823
         },
         content: 'ECS 6th floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker37: {
@@ -329,7 +329,7 @@ total: 1
             lng: -123.31097256174465
         },
         content: 'ELW B1',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker38: {
@@ -338,7 +338,7 @@ total: 1
             lng: -123.31033925637269
         },
         content: 'ELW Main floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker39: {
@@ -347,7 +347,7 @@ total: 1
             lng: -123.31084670968853
         },
         content: 'ELW 2nd floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker40: {
@@ -356,7 +356,7 @@ total: 1
             lng: -123.31097110485935
         },
         content: 'ELW 3rd floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker41: {
@@ -365,7 +365,7 @@ total: 1
             lng: -123.30967501571749
         },
         content: 'EOW B1',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker42: {
@@ -374,7 +374,7 @@ total: 1
             lng: -123.30985623188965
         },
         content: 'EOW Main floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker43: {
@@ -383,7 +383,7 @@ total: 1
             lng: -123.30702507010757
         },
         content: 'The Cove Main floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker44: {
@@ -392,7 +392,7 @@ total: 1
             lng: -123.30725212674602
         },
         content: 'The Cove 2nd floor',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker45: {
@@ -401,7 +401,7 @@ total: 1
             lng: -123.30817362778484
         },
         content: 'The SUB 1',
-        rating: 5,
+        rating: NA,
 total: 1
     },
     marker46: {
@@ -410,7 +410,7 @@ total: 1
             lng: -123.30801600449101
         },
         content: 'The SUB 2',
-        rating: 5,
+        rating: NA,
 total: 1
     },
 }
